@@ -1,0 +1,36 @@
+{
+  "name": "shey-pos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "15.7.0",
+    "npm": "7.4.3"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8",
+    "nodemon": "^2.0.15",
+    "razorpay": "^2.8.1",
+    "shortid": "^2.2.16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibbikhan87981/MERN-Stack-Retail-Store-POS-Application.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ibbikhan87981/MERN-Stack-Retail-Store-POS-Application/issues"
+  },
+  "homepage": "https://github.com/ibbikhan87981/MERN-Stack-Retail-Store-POS-Application#readme",
+  "description": ""
+}
